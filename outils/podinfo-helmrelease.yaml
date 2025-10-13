@@ -4,17 +4,19 @@ metadata:
   name: podinfo
   namespace: flux-system
 spec:
+  releaseName: podinfo
   targetNamespace: outils
   interval: 1m
   chart:
     spec:
       chart: podinfo
-      version: 6.6.3          # épingle une version (mets à jour si besoin)
+      version: "6.6.3"
       sourceRef:
         kind: HelmRepository
         name: podinfo
         namespace: flux-system
   install:
+    createNamespace: true
     remediation:
       retries: 3
   upgrade:
