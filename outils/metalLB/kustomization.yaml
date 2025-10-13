@@ -3,4 +3,4 @@ kind: Kustomization
 resources:
   - metalLB-helmrepo.yaml
   - metalLB-helmrelease.yaml
-  - ipaddresspool.yaml
+#  - ipaddresspool.yaml
