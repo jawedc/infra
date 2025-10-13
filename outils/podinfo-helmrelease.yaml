@@ -2,8 +2,9 @@ apiVersion: helm.toolkit.fluxcd.io/v2
 kind: HelmRelease
 metadata:
   name: podinfo
-  namespace: outils
+  namespace: flux-system
 spec:
+  targetNamespace: outils
   interval: 1m
   chart:
     spec:
